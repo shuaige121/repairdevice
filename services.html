@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Repair Advice Singapore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-tools"></i>
+                    <span>REPAIR ADVICE</span>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active"
+                        data-i18n="nav_services">Services</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <div class="lang-selector">
+                    <div id="current-lang">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang-text">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="zh">中文</div>
+                        <div class="lang-option" data-lang="ms">Melayu</div>
+                        <div class="lang-option" data-lang="ta">தமிழ்</div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="services_title">Our Services</h2>
+                <p data-i18n="services_desc">Comprehensive repair services for your devices.</p>
+            </div>
+
+            <div class="services-grid">
+
+                <!-- iPhone -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/services/iphone.png" alt="iPhone Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv_iphone_title">iPhone & iPad Repair</h3>
+                        <p data-i18n="srv_iphone_desc">Screen replacement, battery replacement, charging port repair,
+                            camera repair, and more.</p>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_quote">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- MacBook -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/services/macbook.png" alt="MacBook Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv_mac_title">MacBook & iMac Repair</h3>
+                        <p data-i18n="srv_mac_desc">Screen repair, keyboard replacement, battery service, logic board
+                            repair, SSD upgrades.</p>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_quote">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Watch -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/services/apple-watch.png" alt="Apple Watch Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv_watch_title">Apple Watch Repair</h3>
+                        <p data-i18n="srv_watch_desc">Screen repair, battery replacement, button repair, charging
+                            issues.</p>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_quote">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Surface -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/services/surface.png" alt="Surface Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv_surface_title">Microsoft Surface Repair</h3>
+                        <p data-i18n="srv_surface_desc">Screen replacement, battery service, keyboard repair.</p>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_quote">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Data Recovery -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/services/data-recovery.png" alt="Data Recovery">
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv_data_title">Data Recovery</h3>
+                        <p data-i18n="srv_data_desc">Recover data from damaged devices, failed hard drives.</p>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="btn_quote">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p data-i18n="footer_copyright">© 2025 Repair Advice. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6583650599" class="whatsapp-float" id="whatsapp-link" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
