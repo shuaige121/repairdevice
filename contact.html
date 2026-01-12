@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Repair Advice Singapore</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -55,12 +56,12 @@
 
     <section class="section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2 data-i18n="nav_contact">Contact Us</h2>
             </div>
 
             <div class="contact-wrapper">
-                <div class="contact-info-box">
+                <div class="contact-info-box" data-aos="fade-right">
                     <div class="info-item">
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
@@ -94,12 +95,13 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/6583650599" class="btn btn-primary" style="width:100%; margin-top:20px;">
+                    <a href="https://wa.me/6583650599" class="btn btn-primary btn-glass"
+                        style="width:100%; margin-top:20px;">
                         <i class="fab fa-whatsapp"></i> WhatsApp Us Now
                     </a>
                 </div>
 
-                <div class="map-container">
+                <div class="map-container" data-aos="fade-left">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.789268817!2d103.8536!3d1.3008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a4a5b0c5cd%3A0x1234567890abcdef!2sSim%20Lim%20Square!5e0!3m2!1sen!2ssg!4v1700000000000"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
@@ -108,7 +110,7 @@
             </div>
 
             <!-- Floor Map -->
-            <div class="floor-map-container">
+            <div class="floor-map-container" data-aos="fade-up">
                 <h3>How to Find Us (Level 3)</h3>
                 <p>We are located at #03-42 in the middle section.</p>
                 <img src="images/floor-map.svg" alt="Sim Lim Square Floor Map Level 3" class="floor-map-svg">
@@ -144,6 +146,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
