@@ -1,4 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS Animation Library
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 100
+    });
+
+    // Sticky Navbar Logic
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Animated Counters with Intersection Observer
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    };
+
+    const counterObserver = new IntersectionObserver(animateCounters, {
+        root: null,
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
     // Language Handling
     const langSelector = document.querySelector('.lang-selector');
     const currentLangDisplay = document.getElementById('current-lang-text');
@@ -35,6 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+
+            // Toggle body scroll
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
         });
     }
 
@@ -43,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
         });
     });
 
